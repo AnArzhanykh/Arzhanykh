@@ -17,9 +17,25 @@ var app = new Vue({
             {text: 'дела2222'},
             {text: 'дела22222'}
         ],
+        seen: false,
+        
+        
+
     },
     methods: {
-        
+        downTransition(){
+
+            let i = this.morning.pop();
+            this.afternoon.unshift(i);
+
+
+        },
+        upTransition(){
+            let i = this.afternoon.pop();
+            this.morning.unshift(i);
+            
+
+        }
     }
   })
 

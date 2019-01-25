@@ -14,16 +14,20 @@
             <li v-for ="item in morning">
             {{ item.text}}
             </li>
-            <button @on>transfer</button>
+            <button @click="downTransition()"
+                    v-if="seen">
+                    transfer
+            </button>
         </ol>
         <ol>
             <li v-for ="item in afternoon">
             {{ item.text}}
             </li>
-
+            <button @click="upTransition()">transfer</button>
         </ol>
     </div>
 
     <script src="main.js"></script>
 </body>
 </html>
+
